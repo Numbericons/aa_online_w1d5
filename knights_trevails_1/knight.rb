@@ -49,8 +49,14 @@ class KnightPathFinder
     end
     
     def find_path(end_pos) #traverse tree,   output [[],[],[]]
+        destination = self.root_node.move_tree.select { |node| node.value == end_pos }
         #until parent of a node is nil, push parent into return array
     end
+
+    def trace_path_back
+
+    end
+
 end
 
 if __FILE__ == $PROGRAM_NAME
