@@ -1,10 +1,12 @@
 class PolyTreeNode 
     attr_reader :parent, :children, :value
+    attr_accessor :move_tree
 
-    def initialize(value) #self = b node
-        @parent = nil
+    def initialize(value, parent = nil) #self = b node
+        @parent = parent
         @children = []
         @value = value
+        @move_tree = []
     end
 
     def parent=(node) #parent=(a)
@@ -31,7 +33,7 @@ class PolyTreeNode
     end
     
     def inspect
-        self.value.inspect
+        "Node:" + self.value.inspect
     end
 
     #     a     "a" value = 0, children = [b,c], parent = nil
